@@ -16,12 +16,24 @@
         <action
             android:id="@+id/action_itemFragment_to_elementDescriptionPage"
             app:destination="@id/elementDescriptionPage" />
+        <action
+            android:id="@+id/action_itemFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
     </fragment>
     <fragment
         android:id="@+id/elementDescriptionPage"
         android:name="com.example.onelab_homework.ElementDescriptionPage"
         android:label="fragment_element_description_page"
         tools:layout="@layout/fragment_element_description_page" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.onelab_homework.fragments.placeholder.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_elementDescriptionPage"
+            app:destination="@id/elementDescriptionPage" />
+    </fragment>
 
 
 </navigation>

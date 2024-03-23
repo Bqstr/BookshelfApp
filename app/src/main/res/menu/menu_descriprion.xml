@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item android:id="@+id/addToFavorite" android:icon="@drawable/baseline_not_favorite" android:title="Add to Favotite"
+app:showAsAction="ifRoom"
+    />
+
+    <item android:id="@+id/addTimer" android:icon="@drawable/baseline_timer_24" android:title="Add Timer"
+        app:showAsAction="ifRoom"
+        />
+</menu>

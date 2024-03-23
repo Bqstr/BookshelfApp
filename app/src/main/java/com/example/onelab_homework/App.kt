@@ -1,9 +1,16 @@
 package com.example.onelab_homework
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.content.Context
+import android.os.Build
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
+import androidx.room.Room
 import com.example.homework.book.BookApi
-import com.example.homework.book.BooksRepository
-import com.example.homework.book.BooksRepositoryImpl
+import com.example.onelab_homework.database.BooksRepository
+import com.example.onelab_homework.database.AppDatabase
+import com.example.onelab_homework.database.BooksRepositoryImpl
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -21,12 +28,23 @@ object App {
 
 
 
+
+    private val database1: AppDatabase by lazy<AppDatabase> {
+        Room.databaseBuilder(applicationContext, AppDatabase::class.java, "database.db")
+            //      .createFromAsset("initial_database.db")
+            .build()
+    }
+
+
+
     private val bookApi = retrofit.create(BookApi::class.java)
 
 
     val booksRepository: BooksRepository by lazy{
-        BooksRepositoryImpl(bookApi )
+        BooksRepositoryImpl(bookApi, database1.getBookDao() )
     }
+
+
 
 
 
