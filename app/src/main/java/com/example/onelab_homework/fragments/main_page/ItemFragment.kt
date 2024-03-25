@@ -60,7 +60,6 @@ class ItemFragment : Fragment() {
 
 
         viewModel.books.observe(viewLifecycleOwner){
-            Log.d("32132123", "observer works")
             adapter.assignist(it)
         }
 
@@ -87,6 +86,10 @@ class ItemFragment : Fragment() {
                        true
 
                }
+
+//                R.id.delete ->{
+//
+//                }
 
 
 
