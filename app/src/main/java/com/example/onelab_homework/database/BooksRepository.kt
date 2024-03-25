@@ -1,7 +1,7 @@
 package com.example.onelab_homework.database
 
 import com.example.homework.book.Book
-import com.example.onelab_homework.book.Resource
+import com.example.onelab_homework.data.Resource
 
 interface BooksRepository {
     suspend fun getBooks(text:String): Resource<List<Book>>
@@ -23,6 +23,8 @@ interface BooksRepository {
 
     suspend fun getAllBooks():List<Book>
 
+
+    suspend fun deleteAllFavorites()
 
 
     //clear cache

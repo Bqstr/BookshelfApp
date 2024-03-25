@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
         android:name="com.example.onelab_homework.ItemFragment"
@@ -30,8 +31,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:context=".ItemFragment"
+        tools:context=".fragments.main_page.ItemFragment"
         tools:listitem="@layout/fragment_item" />
+
+
 
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.onelab_homework.book
+package com.example.onelab_homework.data
 
 sealed class Resource<T>(val data: T? = null, val message: String? = null) {
     class Success<T>(data: T) : Resource<T>(data)

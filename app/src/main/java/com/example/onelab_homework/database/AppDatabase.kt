@@ -10,7 +10,6 @@ import androidx.room.TypeConverters
     version = 1,
     entities = [BookDbEntity::class ]
 )
-//@TypeConverters(BookConverters::class )
 abstract class AppDatabase:RoomDatabase() {
 
     abstract fun getBookDao():BookDao

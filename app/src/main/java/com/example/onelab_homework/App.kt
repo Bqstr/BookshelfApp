@@ -1,11 +1,6 @@
 package com.example.onelab_homework
 
-import android.app.NotificationChannel
-import android.app.NotificationManager
 import android.content.Context
-import android.os.Build
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import androidx.room.Room
 import com.example.homework.book.BookApi
 import com.example.onelab_homework.database.BooksRepository

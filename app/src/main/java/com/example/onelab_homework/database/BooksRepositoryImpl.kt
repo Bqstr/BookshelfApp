@@ -3,7 +3,7 @@ package com.example.onelab_homework.database
 import android.util.Log
 import com.example.homework.book.Book
 import com.example.homework.book.BookApi
-import com.example.onelab_homework.book.Resource
+import com.example.onelab_homework.data.Resource
 
 
 class BooksRepositoryImpl(val api: BookApi, val bookDao:BookDao): BooksRepository {
@@ -116,6 +116,10 @@ class BooksRepositoryImpl(val api: BookApi, val bookDao:BookDao): BooksRepositor
 
     override suspend fun getAllBooks(): List<Book> {
         TODO("Not yet implemented")
+    }
+
+    override suspend fun deleteAllFavorites() {
+        bookDao.deleteAllFavorites()
     }
 
     override suspend fun deleteAllBooks() {

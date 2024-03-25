@@ -24,6 +24,13 @@ interface BookDao {
 
 
 
+  @Query("Delete from book where isFavorite =1")
+  suspend fun deleteAllFavorites()
+
+
+
+
+
 
   @Query("UPDATE book SET isFavorite =:isFavorite where name =:name")
   suspend fun changeFavorite(name:String ,isFavorite:Boolean)

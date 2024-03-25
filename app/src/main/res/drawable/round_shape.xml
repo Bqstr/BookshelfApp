@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <corners android:radius="22dp"/> <!-- Adjust the radius to your preference -->
+    <solid android:color="#FFFFFF"/> <!-- Background color of your view -->
+    <!-- You can define strokes or gradients here if needed -->
+</shape>

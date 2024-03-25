@@ -1,6 +1,6 @@
 package com.example.homework.book
 
-import com.example.onelab_homework.book.BookResponse
+import com.example.onelab_homework.data.BookResponse
 import retrofit2.http.GET
 import retrofit2.http.Query
 

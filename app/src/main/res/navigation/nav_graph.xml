@@ -8,7 +8,7 @@
     <fragment
 
         android:id="@+id/itemFragment"
-        android:name="com.example.onelab_homework.ItemFragment"
+        android:name="com.example.onelab_homework.fragments.main_page.ItemFragment"
         android:label="ItemFragment"
         tools:layout="@layout/fragment_item_list">
 
@@ -22,12 +22,12 @@
     </fragment>
     <fragment
         android:id="@+id/elementDescriptionPage"
-        android:name="com.example.onelab_homework.ElementDescriptionPage"
+        android:name="com.example.onelab_homework.fragments.description_page.ElementDescriptionPage"
         android:label="fragment_element_description_page"
         tools:layout="@layout/fragment_element_description_page" />
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.example.onelab_homework.fragments.placeholder.FavoritesFragment"
+        android:name="com.example.onelab_homework.fragments.favorites_page.FavoritesFragment"
         android:label="fragment_favorites"
         tools:layout="@layout/fragment_favorites" >
         <action

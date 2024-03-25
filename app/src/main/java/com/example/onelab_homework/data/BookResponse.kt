@@ -1,4 +1,4 @@
-package com.example.onelab_homework.book
+package com.example.onelab_homework.data
 
 
 data class IndustryIdentifier(

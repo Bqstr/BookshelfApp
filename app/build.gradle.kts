@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.onelab_homework"
-        minSdk = 26
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -122,7 +122,10 @@ dependencies {
 
 
     //work Manager
-    implementation("android.arch.work:work-runtime-ktx:1.0.1")
+    implementation("android.arch.work:work-runtime-ktx:1.7.1")
+
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
+
 
 
     //Dagger-Hilt

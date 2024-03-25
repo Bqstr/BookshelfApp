@@ -1,32 +1,20 @@
-package com.example.onelab_homework
+package com.example.onelab_homework.fragments.main_page
 
-import android.Manifest
-import android.app.NotificationChannel
-import android.app.NotificationManager
 import android.content.Context
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.os.Build
 import android.util.Log
-import androidx.core.app.ActivityCompat
-import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.homework.book.Book
 import com.example.onelab_homework.database.BooksRepository
-import com.example.onelab_homework.book.Resource
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
+import com.example.onelab_homework.data.Resource
+import com.example.onelab_homework.util.SingleLiveEvent
 import kotlinx.coroutines.launch
 
 class ListViewModel(val repository: BooksRepository ,val context: Context): ViewModel() {
 
 
     var books = MutableLiveData<MutableList<Book>>()
-    var favorites =MutableLiveData<MutableList<Book>>()
 
 
 
@@ -84,17 +72,7 @@ class ListViewModel(val repository: BooksRepository ,val context: Context): View
 
 
 
-    suspend fun getAllFavorites()  {
-        Log.d("1233312132312" ,"WHAT")
-       viewModelScope.launch {
-              favorites.value  = repository.getAllFavorites().toMutableList()
 
-
-
-       }
-
-
-    }
 
 
 
